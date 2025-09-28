@@ -23,7 +23,7 @@ USERNAME = "admin"
 PASSWORD = "admin"
 SECRET_KEY = "change_me"
 
-url = os.getenv('DATABASE_URL', f'sqlite:///{Path(basedir).joinpath(DATABASE)}')
+url = os.getenv("DATABASE_URL", f"sqlite:///{Path(basedir).joinpath(DATABASE)}")
 if url.startswith("postgres://"):
     url = url.replace("postgres://", "postgresql://", 1)
 
@@ -38,6 +38,7 @@ app.config.from_object(__name__)
 db = SQLAlchemy(app)
 
 from project import models
+
 
 def login_required(f):
     @wraps(f)
