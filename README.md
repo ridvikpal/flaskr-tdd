@@ -39,3 +39,7 @@ This repo is a clone of https://github.com/shuruizUofT/flaskr-tdd/
 ![alt text](image-14.png)
 ![alt text](image-15.png)
 ![alt text](image-16.png)
+
+## Login Required
+
+![alt text](image-17.png)
