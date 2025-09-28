@@ -30,6 +30,11 @@ This repo is a clone of https://github.com/shuruizUofT/flaskr-tdd/
 ![alt text](image-11.png)
 ![alt text](image-12.png)
 
+## Deployment
+
+![alt text](image-18.png)
+![alt text](image-19.png)
+
 ## SQLAlchemy
 
 ![alt text](image-13.png)
