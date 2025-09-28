@@ -88,14 +88,12 @@ def test_delete_message(client):
     data = json.loads(rv.data)
     assert data["status"] == 1
 
+
 def test_search_message(client):
     """Ensure the messages are searchable"""
     login(client, app.config["USERNAME"], app.config["PASSWORD"])
-    test_data = [
-        Post("Ferrari", "458"),
-        Post("Lexus", "LFA")
-    ]
-    
+    test_data = [Post("Ferrari", "458"), Post("Lexus", "LFA")]
+
     db.session.bulk_save_objects(test_data)
     db.session.commit()
 
