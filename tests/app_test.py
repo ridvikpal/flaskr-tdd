@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 
 from project.app import app, db
+from project.models import Post
 
 TEST_DB = "test.db"
 
@@ -86,3 +87,20 @@ def test_delete_message(client):
     rv = client.get("/delete/1")
     data = json.loads(rv.data)
     assert data["status"] == 1
+
+def test_search_message(client):
+    """Ensure the messages are searchable"""
+    login(client, app.config["USERNAME"], app.config["PASSWORD"])
+    test_data = [
+        Post("Ferrari", "458"),
+        Post("Lexus", "LFA")
+    ]
+    
+    db.session.bulk_save_objects(test_data)
+    db.session.commit()
+
+    rv = client.get(
+        "/search/?query=Ferr",
+    )
+    assert b"Ferrari" in rv.data
+    assert b"Lexus" not in rv.data
