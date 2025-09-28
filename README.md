@@ -1,5 +1,7 @@
 # ECE444 PRA 3
 
+The website is deployed on: https://flaskr-tdd-d23g.onrender.com/
+
 This repo is a clone of https://github.com/shuruizUofT/flaskr-tdd/
 
 ## First Test
