@@ -52,3 +52,5 @@ This repo is a clone of https://github.com/shuruizUofT/flaskr-tdd/
 ## Postgres Database on Render
 
 ![alt text](image-20.png)
+![alt text](image-21.png)
+![alt text](image-22.png)
